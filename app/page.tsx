@@ -1,103 +1,181 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, Github, Linkedin, Mail, Code } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen pt-24 pb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto"
+          >
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent"
+            >
+              Joshua Farhi
+            </motion.h1>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8"
+            >
+              Full-Stack Developer & Digital Architect
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+            >
+              Building scalable, high-performance web applications focused on intuitive user experiences. 
+              Specializing in Next.js, WordPress, and performance optimization with proven results including 95+ Lighthouse scores and sub-3-second load times.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <Link
+                href="/work"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium transition-colors flex items-center gap-2 group"
+              >
+                View My Work
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/about"
+                className="border border-border hover:bg-accent text-foreground px-8 py-3 rounded-full font-medium transition-colors"
+              >
+                About Me
+              </Link>
+            </motion.div>
+          </motion.div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* Featured Technologies */}
+        <section className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mb-12"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <h3 className="text-2xl font-semibold mb-4">Technologies I Excel With</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Leveraging modern frameworks and tools to build robust, scalable applications
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            {[
+              "Next.js", "React", "WordPress", "Python", "Node.js", "Tailwind CSS",
+              "WooCommerce", "Elementor", "SEO", "Performance", "Vercel", "Ahrefs"
+            ].map((tech, index) => (
+              <motion.div
+                key={tech}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}
+                className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center hover:bg-card/80 transition-colors"
+              >
+                <span className="text-sm font-medium">{tech}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+
+        {/* Quick Stats */}
+        <section className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            <div className="text-center bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8">
+              <div className="text-3xl font-bold text-primary mb-2">95+</div>
+              <div className="text-muted-foreground">Lighthouse Score</div>
+            </div>
+            <div className="text-center bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8">
+              <div className="text-3xl font-bold text-primary mb-2">&lt;3s</div>
+              <div className="text-muted-foreground">Load Times</div>
+            </div>
+            <div className="text-center bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8">
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-muted-foreground">Accessibility</div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-12 max-w-2xl mx-auto"
+          >
+            <h3 className="text-2xl font-semibold mb-4">Let&apos;s Build Something Amazing</h3>
+            <p className="text-muted-foreground mb-8">
+              Ready to bring your ideas to life? I&apos;m always excited to work on new projects and collaborate with innovative teams.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:joshfarhi12@gmail.com"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors flex items-center justify-center gap-2"
+              >
+                <Mail className="w-4 h-4" />
+                Get In Touch
+              </a>
+              <div className="flex gap-4 justify-center">
+                <a
+                  href="https://github.com/joshfarhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors"
+                  aria-label="GitHub Profile"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/joshua-farhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://leetcode.com/u/joshfarhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors"
+                  aria-label="LeetCode Profile"
+                >
+                  <Code className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+      </div>
     </div>
   );
 }
