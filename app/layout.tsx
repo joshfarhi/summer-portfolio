@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/navigation";
+import FloatingObjects from "./components/floating-objects";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,8 +50,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <div className="gradient-bg fixed inset-0 pointer-events-none" />
+        <FloatingObjects />
         <Navigation />
-        <main className="relative">
+        <main className="relative z-10">
           {children}
         </main>
       </body>

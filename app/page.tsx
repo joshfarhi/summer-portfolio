@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Code } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Code, Zap, Database, TestTube, Settings, Users, Layers, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Hero Section */}
-        <section className="text-center mb-20">
+        <section className="text-center mb-16 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -17,125 +17,226 @@ export default function Home() {
             className="max-w-4xl mx-auto"
           >
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent"
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent leading-tight"
             >
               Joshua Farhi
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8"
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 sm:mb-8"
             >
-              Full-Stack Developer & Digital Architect
+              Senior Web Engineer
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2 sm:px-0"
             >
-              Building scalable, high-performance web applications focused on intuitive user experiences. 
-              Specializing in Next.js, WordPress, and performance optimization with proven results including 95+ Lighthouse scores and sub-3-second load times.
+              3+ years of experience designing and implementing robust, responsive, and performance-optimized web interfaces using React, Next.js, and TypeScript. 
+              Known for delivering scalable UI/UX systems backed by clean architecture, A/B testing, and search-focused component optimization. 
+              Passionate about building interfaces that are safe, discoverable, and intuitive at scale.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col gap-6 justify-center items-center"
             >
-              <Link
-                href="/work"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium transition-colors flex items-center gap-2 group"
-              >
-                View My Work
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/about"
-                className="border border-border hover:bg-accent text-foreground px-8 py-3 rounded-full font-medium transition-colors"
-              >
-                About Me
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <Link
+                  href="/work"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-colors flex items-center gap-2 group text-sm sm:text-base w-full sm:w-auto justify-center"
+                >
+                  View My Work
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="border border-border hover:bg-accent text-foreground px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-colors text-sm sm:text-base w-full sm:w-auto text-center"
+                >
+                  About Me
+                </Link>
+              </div>
+              
+              {/* Social Media Buttons */}
+              <div className="flex gap-4 justify-center">
+                <a
+                  href="mailto:joshfarhi12@gmail.com"
+                  className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 px-6 py-3 rounded-full font-medium transition-colors flex items-center gap-2 group"
+                  aria-label="Send Email"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span className="hidden sm:inline">Email</span>
+                </a>
+                <a
+                  href="https://github.com/joshfarhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-border hover:bg-accent text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                  aria-label="GitHub Profile"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  <span className="hidden sm:inline">GitHub</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/joshua-farhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-border hover:bg-accent text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                  aria-label="LinkedIn Profile"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  <span className="hidden sm:inline">LinkedIn</span>
+                </a>
+                <a
+                  href="https://leetcode.com/u/joshfarhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-border hover:bg-accent text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                  aria-label="LeetCode Profile"
+                >
+                  <Code className="w-4 h-4" />
+                  <span className="hidden sm:inline">LeetCode</span>
+                </a>
+              </div>
             </motion.div>
           </motion.div>
         </section>
 
         {/* Featured Technologies */}
-        <section className="mb-20">
+        <section className="mb-16 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h3 className="text-2xl font-semibold mb-4">Technologies I Excel With</h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Leveraging modern frameworks and tools to build robust, scalable applications
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Core Technologies & Architecture</h3>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
+              Specialized in building scalable UI/UX systems with cross-functional collaboration expertise
             </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 max-w-5xl mx-auto"
           >
             {[
-              "Next.js", "React", "WordPress", "Python", "Node.js", "Tailwind CSS",
-              "WooCommerce", "Elementor", "SEO", "Performance", "Vercel", "Ahrefs"
-            ].map((tech, index) => (
-              <motion.div
-                key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}
-                className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center hover:bg-card/80 transition-colors"
-              >
-                <span className="text-sm font-medium">{tech}</span>
-              </motion.div>
-            ))}
+              { name: "React.js", icon: Code, gradient: "from-blue-400 to-cyan-400" },
+              { name: "Next.js", icon: Zap, gradient: "from-gray-700 to-gray-900" },
+              { name: "TypeScript", icon: Code, gradient: "from-blue-600 to-indigo-600" },
+              { name: "Tailwind CSS", icon: Layers, gradient: "from-cyan-400 to-blue-500" },
+              { name: "GraphQL", icon: Database, gradient: "from-pink-500 to-rose-500" },
+              { name: "Supabase", icon: Database, gradient: "from-green-400 to-emerald-500" },
+              { name: "Jest", icon: TestTube, gradient: "from-red-500 to-orange-500" },
+              { name: "Lighthouse", icon: Zap, gradient: "from-yellow-400 to-orange-500" },
+              { name: "GitHub Actions", icon: Settings, gradient: "from-gray-800 to-black" },
+              { name: "Vercel", icon: Settings, gradient: "from-black to-gray-800" },
+              { name: ".NET Core", icon: Code, gradient: "from-purple-500 to-indigo-600" },
+              { name: "Figma", icon: Users, gradient: "from-purple-400 to-pink-400" }
+            ].map((tech, index) => {
+              const Icon = tech.icon;
+              return (
+                <motion.div
+                  key={tech.name}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ 
+                    duration: 0.1, 
+                    delay: 0.7 + index * 0.08
+                  }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    rotateY: 5,
+                    rotateX: 5,
+                    z: 50,
+                    transition: { duration: 0.2 }
+                  }}
+                  className="tech-card glass-effect relative bg-card/30 backdrop-blur-xl border border-border/50 rounded-xl p-5 text-center cursor-pointer group overflow-hidden"
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    perspective: '1000px'
+                  }}
+                >
+                  {/* Animated gradient background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${tech.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`} />
+                  
+                  {/* Animated border glow */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${tech.gradient} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 rounded-xl -z-10`} />
+                  
+                  {/* Shimmer effect - entrance + hover */}
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    initial={{ x: "-100%" }}
+                    animate={{ x: "100%" }}
+                    transition={{ 
+                      duration: 1.5, 
+                      delay: 0.9 + index * 0.08,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-1000 ease-in-out" />
+                  
+                  {/* Floating particles effect */}
+                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Sparkles className="w-3 h-3 text-primary animate-pulse" />
+                  </div>
+                  
+                  {/* Icon with enhanced animation */}
+                  <motion.div
+                    className="relative z-10"
+                    whileHover={{ 
+                      rotateY: 360,
+                      transition: { duration: 0.8, ease: "easeInOut" }
+                    }}
+                  >
+                    <Icon className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300" />
+                  </motion.div>
+                  
+                  {/* Text with glow effect */}
+                  <motion.span 
+                    className="relative z-10 text-sm font-semibold group-hover:text-primary transition-colors duration-300 group-hover:drop-shadow-sm"
+                    whileHover={{ 
+                      textShadow: "0 0 8px rgba(66, 133, 244, 0.5)",
+                      transition: { duration: 0.2 }
+                    }}
+                  >
+                    {tech.name}
+                  </motion.span>
+                  
+                  {/* Bottom accent line */}
+                  <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r ${tech.gradient} w-0 group-hover:w-full transition-all duration-500 ease-out`} />
+                </motion.div>
+              );
+            })}
           </motion.div>
         </section>
 
-        {/* Quick Stats */}
-        <section className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-          >
-            <div className="text-center bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8">
-              <div className="text-3xl font-bold text-primary mb-2">95+</div>
-              <div className="text-muted-foreground">Lighthouse Score</div>
-            </div>
-            <div className="text-center bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8">
-              <div className="text-3xl font-bold text-primary mb-2">&lt;3s</div>
-              <div className="text-muted-foreground">Load Times</div>
-            </div>
-            <div className="text-center bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8">
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-muted-foreground">Accessibility</div>
-            </div>
-          </motion.div>
-        </section>
 
         {/* Contact CTA */}
-        <section className="text-center">
+        <section className="text-center px-4 sm:px-0">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-12 max-w-2xl mx-auto"
+            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8 md:p-12 max-w-2xl mx-auto"
           >
-            <h3 className="text-2xl font-semibold mb-4">Let&apos;s Build Something Amazing</h3>
-            <p className="text-muted-foreground mb-8">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Let&apos;s Build Something Amazing</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
               Ready to bring your ideas to life? I&apos;m always excited to work on new projects and collaborate with innovative teams.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
                 href="mailto:joshfarhi12@gmail.com"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors flex items-center justify-center gap-2"

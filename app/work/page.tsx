@@ -5,48 +5,26 @@ import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
 
 const projects = [
   {
-    title: "Springfield Painting - High-Performance Business Website",
-    description: "Lead generation website built with Next.js achieving 95+ Lighthouse performance score and sub-3-second load times. Features local SEO optimization, service showcases, customer testimonials, and mobile-responsive design that converts visitors into customers.",
+    title: "Restaurant Inventory Management System",
+    description: "Comprehensive inventory management platform built with Next.js, featuring real-time stock tracking, automated reorder alerts, supplier management, and cost analysis. Integrated with Supabase for scalable data storage and Clerk for secure authentication with role-based access control for restaurant staff.",
     image: "/placeholder-project-1.jpg",
-    tags: ["Next.js", "Tailwind CSS", "Vercel", "Local SEO", "Performance"],
-    liveUrl: "https://springfieldpainting.com",
-    githubUrl: "https://github.com/joshfarhi/springfield-painting-placeholder",
+    tags: ["Next.js", "Clerk", "Supabase", "TypeScript", "Real-time", "Dashboard"],
+    liveUrl: "https://restaurant-inventory-demo.vercel.app",
+    githubUrl: "https://github.com/joshfarhi/restaurant-inventory-system",
     featured: true,
     year: "2024",
-    category: "Business Website"
+    category: "Enterprise Software"
   },
   {
-    title: "Joyful Expression - E-commerce Platform",
-    description: "Custom WooCommerce e-commerce solution with automated inventory management using Python scripts. Features secure payment processing, product catalog, and optimized checkout flow for improved conversion rates.",
+    title: "Customer Loyalty & Rewards Kiosk System",
+    description: "Full-stack loyalty program platform with interactive kiosk interface and comprehensive admin dashboard. Features customer enrollment, points tracking, reward redemption, and detailed analytics for customer retention insights. Built with Next.js, Clerk authentication, and Supabase for real-time data synchronization.",
     image: "/placeholder-project-2.jpg",
-    tags: ["WordPress", "WooCommerce", "Python", "Elementor", "Payment Gateway"],
-    liveUrl: "https://joyfulexpression.com",
-    githubUrl: "https://github.com/joshfarhi/joyful-expression-placeholder",
+    tags: ["Next.js", "Clerk", "Supabase", "React", "Analytics", "Kiosk UI"],
+    liveUrl: "https://loyalty-kiosk-demo.vercel.app",
+    githubUrl: "https://github.com/joshfarhi/loyalty-rewards-system",
     featured: true,
-    year: "2023",
-    category: "E-commerce"
-  },
-  {
-    title: "Zoots Cannabis Co. - Compliant E-commerce",
-    description: "Industry-compliant cannabis e-commerce platform with age verification, inventory tracking, and secure checkout. Built with WordPress and WooCommerce, featuring product filtering, customer reviews, and admin dashboard for compliance management.",
-    image: "/placeholder-project-3.jpg",
-    tags: ["WordPress", "WooCommerce", "Elementor", "Compliance", "E-commerce"],
-    liveUrl: "https://zootsco.com",
-    githubUrl: "https://github.com/joshfarhi/zoots-cannabis-placeholder",
-    featured: true,
-    year: "2023",
-    category: "E-commerce"
-  },
-  {
-    title: "NexGen Pro Services - SEO Success Stories",
-    description: "Local SEO optimization project helping Naples, FL businesses achieve first-page Google rankings within 30 days. Implemented technical SEO, local citations, and performance optimization strategies.",
-    image: "/placeholder-project-4.jpg",
-    tags: ["WordPress", "Ahrefs", "Local SEO", "Performance", "Analytics"],
-    liveUrl: "https://nexgenpro-placeholder.com",
-    githubUrl: "https://github.com/joshfarhi/nexgen-seo-placeholder",
-    featured: false,
-    year: "2023",
-    category: "SEO Services"
+    year: "2024",
+    category: "Customer Management"
   }
 ];
 
@@ -65,8 +43,8 @@ export default function Work() {
           >
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">My Work</h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              A collection of high-performance web applications and SEO success stories. 
-              From achieving 95+ Lighthouse scores to first-page Google rankings in 30 days.
+              Enterprise-grade applications built with modern technologies. Specializing in inventory management systems, 
+              customer loyalty platforms, and data-driven solutions using Next.js, Clerk, and Supabase.
             </p>
           </motion.div>
         </section>

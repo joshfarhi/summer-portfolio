@@ -6,64 +6,74 @@ import Link from "next/link";
 
 const blogPosts = [
   {
-    title: "My 10 Day Trip to Japan and Remote Work with Python",
-    excerpt: "Discover how I balanced remote development work while exploring Japan for 10 days. Learn about maintaining productivity, cultural experiences, and the tools that made remote work seamless from Tokyo to Kyoto.",
-    slug: "japan-remote-work-python",
-    publishDate: "2024-03-15",
+    title: "Tokyo in 3 Days: The Ultimate Urban Winter Adventure",
+    excerpt: "Discover the best of Tokyo in winter - from Shibuya's neon lights cutting through the cold to traditional temples dusted with snow. Complete Tokyo travel guide with insider tips for navigating Japan's capital in January.",
+    slug: "tokyo-3-days-winter-adventure",
+    publishDate: "2024-01-28",
     readTime: "12 min read",
-    category: "Travel & Tech",
+    category: "Asia Travel",
     featured: true,
-    tags: ["Remote Work", "Python", "Travel", "Japan", "Productivity"]
+    tags: ["Tokyo", "Japan", "Winter", "Shibuya", "Urban Adventure"]
   },
   {
-    title: "Remote Front-End Development, Traveling, Dog Sitting, and Martial Arts: My Two-Month Journey in Philadelphia",
-    excerpt: "A comprehensive look at managing multiple responsibilities while maintaining high-quality development work. Explore how I balanced client projects, personal growth, and lifestyle choices during an extended stay in Philadelphia.",
-    slug: "philadelphia-remote-work-journey",
-    publishDate: "2024-02-10",
-    readTime: "15 min read",
-    category: "Lifestyle & Career",
-    featured: true,
-    tags: ["Remote Work", "Frontend", "Travel", "Martial Arts", "Work-Life Balance"]
-  },
-  {
-    title: "Achieving 95+ Lighthouse Scores: Performance Optimization Strategies",
-    excerpt: "Step-by-step guide to optimizing web applications for peak performance. Learn the techniques I use to consistently deliver sub-3-second load times and 95+ Lighthouse scores for client projects.",
-    slug: "lighthouse-performance-optimization",
-    publishDate: "2024-01-20",
-    readTime: "10 min read",
-    category: "Performance",
-    featured: true,
-    tags: ["Performance", "Lighthouse", "Optimization", "Core Web Vitals", "SEO"]
-  },
-  {
-    title: "Local SEO Success: From Zero to First Page in 30 Days",
-    excerpt: "Real case studies from Naples, FL businesses that achieved first-page Google rankings in under 30 days. Discover the exact local SEO strategies and technical optimizations that drive results.",
-    slug: "local-seo-30-days",
-    publishDate: "2023-12-05",
+    title: "Seoul Decoded: A Modern Korean City Break in February",
+    excerpt: "Uncover Seoul's perfect blend of tradition and modernity during the coldest month. From heated Korean BBQ in Gangnam to exploring Myeongdong's winter markets, experience Seoul when the culture runs hot despite the freezing temperatures.",
+    slug: "seoul-decoded-february-city-break",
+    publishDate: "2024-02-25",
     readTime: "14 min read",
-    category: "SEO",
-    featured: false,
-    tags: ["Local SEO", "Google Rankings", "Case Study", "Ahrefs", "Technical SEO"]
+    category: "Asia Travel",
+    featured: true,
+    tags: ["Seoul", "South Korea", "Winter", "Korean Culture", "City Break"]
   },
   {
-    title: "Building E-commerce Solutions with WooCommerce and Python Automation",
-    excerpt: "Learn how to create powerful e-commerce platforms using WordPress, WooCommerce, and custom Python scripts for inventory management. Includes real examples from Joyful Expression project.",
-    slug: "woocommerce-python-automation",
-    publishDate: "2023-11-18",
+    title: "Hanoi Unveiled: Vietnam's Cultural Tapestry in Spring",
+    excerpt: "Dive deep into Hanoi's rich culture as spring awakens the city. From ancient traditions in the Old Quarter to modern life along the Red River Delta, discover Vietnam's captivating capital emerging from winter.",
+    slug: "hanoi-unveiled-spring-cultural-tapestry",
+    publishDate: "2024-03-30",
     readTime: "16 min read",
-    category: "E-commerce",
-    featured: false,
-    tags: ["WooCommerce", "Python", "E-commerce", "Automation", "WordPress"]
+    category: "Asia Travel",
+    featured: true,
+    tags: ["Hanoi", "Vietnam", "Spring", "Culture", "Old Quarter"]
   },
   {
-    title: "Next.js vs WordPress: Choosing the Right Tool for Business Websites",
-    excerpt: "Comprehensive comparison of Next.js and WordPress for business websites. When to choose each platform, performance considerations, and real-world project examples.",
-    slug: "nextjs-vs-wordpress-business",
-    publishDate: "2023-10-22",
+    title: "Bangkok's Urban Jungle: Street Photography & Hot Season Culture",
+    excerpt: "Master Bangkok street photography while exploring the city's vibrant culture during the hot season. From Sukhumvit's bustling streets to hidden temples, capture the essence of urban Thailand in April's heat.",
+    slug: "bangkok-urban-jungle-hot-season",
+    publishDate: "2024-04-20",
+    readTime: "13 min read",
+    category: "Asia Travel",
+    featured: true,
+    tags: ["Bangkok", "Thailand", "Hot Season", "Street Photography", "Urban Culture"]
+  },
+  {
+    title: "Southern Thailand Sunsets: Chasing Golden Hour in Paradise",
+    excerpt: "Capture stunning sunsets along Thailand's southern coast during the perfect weather season. Best locations, timing, and photography tips for magical golden hour moments along the Gulf of Thailand.",
+    slug: "southern-thailand-sunsets-golden-hour",
+    publishDate: "2024-05-10",
     readTime: "11 min read",
-    category: "Web Development",
+    category: "Asia Travel",
     featured: false,
-    tags: ["Next.js", "WordPress", "Business Websites", "Performance", "SEO"]
+    tags: ["Southern Thailand", "Beaches", "Photography", "Sunset", "Gulf of Thailand"]
+  },
+  {
+    title: "Vientiane Secrets: Laos' Hidden Capital Gem Along the Mekong",
+    excerpt: "Discover Vientiane's charm along the Mekong River during the perfect travel season. Why Laos' capital should be on every Southeast Asia itinerary - from riverside scenes to urban night markets.",
+    slug: "vientiane-secrets-mekong-capital",
+    publishDate: "2024-05-20",
+    readTime: "10 min read",
+    category: "Asia Travel",
+    featured: false,
+    tags: ["Vientiane", "Laos", "Mekong River", "Hidden Gems", "Southeast Asia"]
+  },
+  {
+    title: "The Ultimate 5-Month Asia Circuit: Country-Hopping Through Seasons",
+    excerpt: "Epic 5-month journey across Japan, Korea, Thailand, Vietnam & Laos through different seasons. Complete logistics, costs, and insider tips for navigating winter temples to hot season beaches.",
+    slug: "ultimate-5-month-asia-circuit",
+    publishDate: "2024-05-25",
+    readTime: "18 min read",
+    category: "Asia Travel",
+    featured: false,
+    tags: ["Asia Circuit", "Multi-Country", "Seasons", "Travel Guide", "Digital Nomad"]
   }
 ];
 
@@ -90,8 +100,8 @@ export default function Blog() {
           >
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">Blog</h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Personal insights on remote work, travel, web development, and achieving high-performance results. 
-              Real experiences from a digital nomad developer&apos;s journey.
+              Personal stories and experiences from a 5-month journey across Asia. 
+              From Tokyo's winter neon to Thailand's hot season beaches, plus hidden gems in Laos - discover the seasonal magic of Asia.
             </p>
           </motion.div>
         </section>
