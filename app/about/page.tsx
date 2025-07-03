@@ -121,7 +121,7 @@ export default function About() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8">
-            >
+            
               <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2">
                 <Coffee className="w-5 h-5 text-primary" />
                 Quick Facts
@@ -158,7 +158,7 @@ export default function About() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6">
-                >
+                
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-primary/10 rounded-lg">
                       <Icon className="w-5 h-5 text-primary" />
