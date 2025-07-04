@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Joshua Farhi - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js showcasing my projects, skills, and professional journey.
 
-First, run the development server:
+🌐 **Live Site**: [joshuafarhi.com](https://joshuafarhi.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Portfolio Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🏠 [Home](https://joshuafarhi.com)
+Landing page with hero section introducing myself and my work as a developer. Features smooth animations and a clean, professional design that makes a strong first impression.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 👨‍💻 [About](https://joshuafarhi.com/about)
+Personal story and professional background, including my journey into development, education, and what drives my passion for creating digital solutions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛠️ [Projects](https://joshuafarhi.com/projects)
+Showcase of my latest work with detailed project cards featuring:
+- Live demo links and GitHub repositories
+- Technology stacks used
+- Project descriptions and key features
+- Screenshots and interactive previews
 
-## Learn More
+### 💼 [Skills](https://joshuafarhi.com/skills)
+Visual representation of my technical expertise organized by category:
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, PostgreSQL, MongoDB
+- **Tools**: Git, Docker, AWS, Vercel
+- **Design**: Figma, Adobe Creative Suite
 
-To learn more about Next.js, take a look at the following resources:
+### 📧 [Contact](https://joshuafarhi.com/contact)
+Get in touch through multiple channels:
+- Direct contact form for project inquiries
+- Professional social media links
+- Email and location information
+- Downloadable resume/CV
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📱 [Blog](https://joshuafarhi.com/blog) *(Coming Soon)*
+Technical articles and development insights sharing my learning journey and industry thoughts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- **Framework**: Next.js 13+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+- **Performance**: Optimized images, code splitting, and SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design Highlights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Responsive Design** - Seamless experience across desktop, tablet, and mobile
+- **Dark/Light Mode** - Theme toggle for user preference
+- **Smooth Animations** - Framer Motion powered transitions and micro-interactions
+- **Accessibility** - WCAG compliant with proper contrast ratios and keyboard navigation
+- **Fast Loading** - Optimized for Core Web Vitals with 95+ Lighthouse scores
+
+## Connect With Me
+
+- **Website**: [joshuafarhi.com](https://joshuafarhi.com)
+- **Email**: contact@joshuafarhi.com
+- **LinkedIn**: [linkedin.com/in/joshuafarhi](https://linkedin.com/in/joshuafarhi)
+- **GitHub**: [github.com/joshuafarhi](https://github.com/joshuafarhi)
+- **Twitter**: [@joshuafarhi](https://twitter.com/joshuafarhi)
+
+## Copyright & Usage
+
+© 2025 Joshua Farhi. All rights reserved.
+
+This portfolio website and its source code are protected by copyright. The code, design, and content are proprietary and may not be copied, modified, distributed, or used for commercial purposes without explicit written permission from Joshua Farhi.
+
+**What this means:**
+- ✅ You may view and study the code for educational purposes
+- ✅ You may reference techniques and approaches in your own original work
+- ❌ You may not copy, clone, or redistribute this code
+- ❌ You may not use this code as a template for your own portfolio
+- ❌ You may not use any of the design elements, content, or structure
+
+For licensing inquiries or permission requests, please contact: contact@joshuafarhi.com
+
+---
+
+✨ Built with passion during Summer 2025 | ⭐ Star this repository if you found it inspiring!
