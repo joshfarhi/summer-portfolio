@@ -57,10 +57,9 @@ Technical articles and development insights sharing my learning journey and indu
 ## Connect With Me
 
 - **Website**: [joshuafarhi.com](https://joshuafarhi.com)
-- **Email**: contact@joshuafarhi.com
+- **Email**: joshfarhi12@gmail.com
 - **LinkedIn**: [linkedin.com/in/joshuafarhi](https://linkedin.com/in/joshuafarhi)
-- **GitHub**: [github.com/joshuafarhi](https://github.com/joshuafarhi)
-- **Twitter**: [@joshuafarhi](https://twitter.com/joshuafarhi)
+- **GitHub**: [github.com/joshuafarhi](https://github.com/joshfarhi)
 
 ## Copyright & Usage
 
