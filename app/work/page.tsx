@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
     title: "Kiosk Rewards Points System",
     description: "Designed using Next.js, Supabase, Clerk, TypeScript, and modern web technologies to deliver seamless customer loyalty experiences. Features interactive kiosk interface, point accumulation, reward redemption, and comprehensive analytics dashboard for business insights.",
-    image: "/placeholder-project-1.jpg",
+    image: "/SmokeTokensBanner.webp",
     tags: ["Next.js", "Supabase", "Clerk", "TypeScript", "Kiosk UI", "Analytics"],
     liveUrl: "#", // Replace with actual link
     githubUrl: "#", // Replace with actual link
@@ -18,7 +19,7 @@ const projects = [
   {
     title: "Inventory Tracking System",
     description: "Created a full-stack system for managing product stock levels, locations, and user roles across multiple teams. Built with a modern React frontend and .NET Core microservices on the backend. Features real-time updates, automated alerts, and comprehensive reporting.",
-    image: "/placeholder-project-2.jpg",
+    image: "/85appBanner.webp",
     tags: ["React", ".NET Core", "Microservices", "Real-time", "Multi-user", "Dashboard"],
     liveUrl: "#", // Replace with actual link
     githubUrl: "#", // Replace with actual link
@@ -159,8 +160,21 @@ export default function Work() {
                   </div>
                   
                   <div className="lg:order-first">
-                    <div className="bg-muted/20 border border-border rounded-xl aspect-[4/3] flex items-center justify-center">
-                      <span className="text-muted-foreground">Project Screenshot</span>
+                    <div className="aspect-[4/3] overflow-hidden">
+                      {project.image.includes('placeholder') ? (
+                        <div className="w-full h-full flex items-center justify-center bg-muted/20 border border-border rounded-xl">
+                          <span className="text-muted-foreground">Project Screenshot</span>
+                        </div>
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={600}
+                          height={450}
+                          className="w-full h-full object-contain"
+                          style={{ borderRadius: '18px' }}
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
@@ -189,8 +203,21 @@ export default function Work() {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className="bg-card/30 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:bg-card/50 transition-colors group"
               >
-                <div className="bg-muted/20 border-b border-border aspect-[4/3] flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Project Screenshot</span>
+                <div className="aspect-[4/3] overflow-hidden">
+                  {project.image.includes('placeholder') ? (
+                    <div className="w-full h-full flex items-center justify-center bg-muted/20 border-b border-border">
+                      <span className="text-muted-foreground text-sm">Project Screenshot</span>
+                    </div>
+                  ) : (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-contain"
+                      style={{ borderRadius: '18px' }}
+                    />
+                  )}
                 </div>
                 
                 <div className="p-6">
