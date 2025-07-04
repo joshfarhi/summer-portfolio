@@ -40,5 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#Claude Instructions for IDE
+# markdown files
+asia_vacation_data.md
 CLAUDE.md
+
+
