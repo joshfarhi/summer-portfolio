@@ -256,8 +256,8 @@ export default function Blog() {
           >
             <h3 className="text-2xl font-semibold mb-4">Stay Updated</h3>
             <p className="text-muted-foreground mb-8">
-              Get the latest articles and insights delivered straight to your inbox. 
-              No spam, just valuable content about web development and technology.
+              Did I capture your attention? 
+              No spam, just more writings to come about my travels and experiences as a Digital Nomad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

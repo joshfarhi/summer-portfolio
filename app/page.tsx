@@ -228,9 +228,9 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8 md:p-12 max-w-2xl mx-auto"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Let&apos;s Build Something Amazing</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Currently seeking new full-time opportunities!</h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
-              Ready to bring your ideas to life? I&apos;m always excited to work on new projects and collaborate with innovative teams.
+              Please feel free to contact me if you are a technical recruiter or associated with a company hiring for a developer role.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a

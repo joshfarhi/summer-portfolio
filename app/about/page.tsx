@@ -137,7 +137,7 @@ export default function About() {
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">About Me</h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
-              Senior Web Engineer with 3+ years of experience designing and implementing robust, responsive, 
+              Full-Stack Developer with 3+ years of professional experience designing and implementing robust, responsive, 
               and performance-optimized web interfaces. Specialized in building scalable UI/UX systems that 
               prioritize safety, discoverability, and intuitive user experiences at scale.
             </p>
@@ -152,10 +152,10 @@ export default function About() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6">Engineering Excellence</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6">A little about myself..</h2>
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                 <p>
-                  As a Senior Web Engineer, I specialize in architecting robust, scalable web interfaces 
+                  As a Full-Stack Web Developer, I specialize in architecting robust, scalable web interfaces 
                   using React, Next.js, and TypeScript. My expertise spans from component-level optimization 
                   to full-scale UI/UX system design, with a focus on clean architecture and performance.
                 </p>
@@ -166,7 +166,7 @@ export default function About() {
                   discoverable, and intuitive for users at scale.
                 </p>
                 <p>
-                  With proven experience in delivering 95+ Lighthouse scores and sub-3-second load times, 
+                  With proven experience in delivering SEO and website growth, 
                   I bring a deep understanding of modern web standards and performance optimization 
                   techniques that drive both user satisfaction and business results.
                 </p>
@@ -183,7 +183,7 @@ export default function About() {
                 Quick Facts
               </h3>
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-muted-foreground">
-                <li>🚀 3+ years senior web engineering experience</li>
+                <li>🚀 3+ years full-stack web developer experience</li>
                 <li>⚡ Expert in React, Next.js & TypeScript architecture</li>
                 <li>🎯 Scalable UI/UX systems design & implementation</li>
                 <li>📊 A/B testing & search-focused optimization</li>
