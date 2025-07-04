@@ -5,24 +5,57 @@ import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
 
 const projects = [
   {
+    title: "Kiosk Rewards Points System",
+    description: "Designed using Next.js, Supabase, Clerk, TypeScript, and modern web technologies to deliver seamless customer loyalty experiences. Features interactive kiosk interface, point accumulation, reward redemption, and comprehensive analytics dashboard for business insights.",
+    image: "/placeholder-project-1.jpg",
+    tags: ["Next.js", "Supabase", "Clerk", "TypeScript", "Kiosk UI", "Analytics"],
+    liveUrl: "#", // Replace with actual link
+    githubUrl: "#", // Replace with actual link
+    featured: true,
+    year: "2024",
+    category: "Customer Loyalty"
+  },
+  {
+    title: "Inventory Tracking System",
+    description: "Created a full-stack system for managing product stock levels, locations, and user roles across multiple teams. Built with a modern React frontend and .NET Core microservices on the backend. Features real-time updates, automated alerts, and comprehensive reporting.",
+    image: "/placeholder-project-2.jpg",
+    tags: ["React", ".NET Core", "Microservices", "Real-time", "Multi-user", "Dashboard"],
+    liveUrl: "#", // Replace with actual link
+    githubUrl: "#", // Replace with actual link
+    featured: true,
+    year: "2024",
+    category: "Enterprise Software"
+  },
+  {
+    title: "Intelligent Chat-bot",
+    description: "Developed for websites that handles customer questions and booking requests, integrating natural language processing with booking systems to streamline customer interactions. Features automated responses, booking integration, and conversation analytics.",
+    image: "/placeholder-project-3.jpg",
+    tags: ["NLP", "Chat-bot", "Booking Integration", "AI", "Customer Service", "Analytics"],
+    liveUrl: "#", // Replace with actual link
+    githubUrl: "#", // Replace with actual link
+    featured: true,
+    year: "2024",
+    category: "AI & Automation"
+  },
+  {
     title: "Restaurant Inventory Management System",
     description: "Comprehensive inventory management platform built with Next.js, featuring real-time stock tracking, automated reorder alerts, supplier management, and cost analysis. Integrated with Supabase for scalable data storage and Clerk for secure authentication with role-based access control for restaurant staff.",
-    image: "/placeholder-project-1.jpg",
+    image: "/placeholder-project-4.jpg",
     tags: ["Next.js", "Clerk", "Supabase", "TypeScript", "Real-time", "Dashboard"],
     liveUrl: "https://restaurant-inventory-demo.vercel.app",
     githubUrl: "https://github.com/joshfarhi/restaurant-inventory-system",
-    featured: true,
+    featured: false,
     year: "2024",
     category: "Enterprise Software"
   },
   {
     title: "Customer Loyalty & Rewards Kiosk System",
     description: "Full-stack loyalty program platform with interactive kiosk interface and comprehensive admin dashboard. Features customer enrollment, points tracking, reward redemption, and detailed analytics for customer retention insights. Built with Next.js, Clerk authentication, and Supabase for real-time data synchronization.",
-    image: "/placeholder-project-2.jpg",
+    image: "/placeholder-project-5.jpg",
     tags: ["Next.js", "Clerk", "Supabase", "React", "Analytics", "Kiosk UI"],
     liveUrl: "https://loyalty-kiosk-demo.vercel.app",
     githubUrl: "https://github.com/joshfarhi/loyalty-rewards-system",
-    featured: true,
+    featured: false,
     year: "2024",
     category: "Customer Management"
   }
@@ -43,8 +76,8 @@ export default function Work() {
           >
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">My Work</h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Enterprise-grade applications built with modern technologies. Specializing in inventory management systems, 
-              customer loyalty platforms, and data-driven solutions using Next.js, Clerk, and Supabase.
+              Enterprise-grade applications built with modern technologies. Specializing in customer loyalty systems, 
+              inventory management platforms, AI-powered chat-bots, and data-driven solutions using Next.js, React, .NET Core, and cloud technologies.
             </p>
           </motion.div>
         </section>
