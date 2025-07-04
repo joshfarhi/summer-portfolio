@@ -119,3 +119,8 @@ When making changes:
 5. Follow existing component patterns and naming conventions
 6. Use consistent Framer Motion animation patterns and timings
 7. Test 3D performance on various devices and provide fallbacks if needed
+
+## AI Guidance
+
+- Always reference CLAUDE.md and keep track of updates on that markdown file.
+- Always start by grepping the codebase when we initialize a new set of questions or after a maximum of 5 message exchanges. 

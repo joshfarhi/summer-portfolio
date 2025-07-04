@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Code, Zap, Database, TestTube, Settings, Users, Layers, Sparkles } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Code, Zap, Database, TestTube, Settings, Users, Layers } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -188,10 +188,6 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-1000 ease-in-out" />
                   
-                  {/* Floating particles effect */}
-                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Sparkles className="w-3 h-3 text-primary animate-pulse" />
-                  </div>
                   
                   {/* Icon with enhanced animation */}
                   <motion.div

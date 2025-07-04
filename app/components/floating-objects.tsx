@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { Float } from "@react-three/drei";
 import { useRef, useMemo, Suspense, useState } from "react";
 import { Mesh, Vector3 } from "three";
@@ -8,7 +8,6 @@ import { useFrame } from "@react-three/fiber";
 
 // Mouse tracker for reactive movement
 function MouseTracker() {
-  const { viewport } = useThree();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Store mouse position in a way that other components can access
@@ -16,7 +15,7 @@ function MouseTracker() {
     const mouse = state.mouse;
     setMousePosition({ x: mouse.x, y: mouse.y });
     // Store in state for other components to use
-    (state as any).mousePosition = mousePosition;
+    (state as unknown as { mousePosition: { x: number; y: number } }).mousePosition = mousePosition;
   });
 
   return null;
@@ -175,7 +174,7 @@ function StarField() {
       starsRef.current.rotation.y += 0.0002;
       
       // Subtle twinkling
-      const material = starsRef.current.material as any;
+      const material = starsRef.current.material as unknown as { size: number };
       material.size = 0.08 + Math.sin(state.clock.elapsedTime * 1.5) * 0.02;
     }
   });

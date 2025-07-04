@@ -101,7 +101,7 @@ export default function Blog() {
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">Blog</h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Personal stories and experiences from a 5-month journey across Asia. 
-              From Tokyo's winter neon to Thailand's hot season beaches, plus hidden gems in Laos - discover the seasonal magic of Asia.
+              From Tokyo&apos;s winter neon to Thailand&apos;s hot season beaches, plus hidden gems in Laos - discover the seasonal magic of Asia.
             </p>
           </motion.div>
         </section>
