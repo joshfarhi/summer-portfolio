@@ -457,7 +457,7 @@ export default function About() {
                               to deliver seamless customer loyalty experiences.
                             </p>
                             <a
-                              href="#" // Replace with actual link
+                              href="canna-points-jc3h.vercel.app" // Replace with actual link
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 bg-blue-500/10 hover:bg-blue-500/20 text-blue-500 border border-blue-500/20 px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 flex-shrink-0 mt-1"
@@ -478,7 +478,7 @@ export default function About() {
                               microservices on the backend.
                             </p>
                             <a
-                              href="#" // Replace with actual link
+                              href="https://inventory-85.vercel.app/" // Replace with actual link
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 bg-green-500/10 hover:bg-green-500/20 text-green-500 border border-green-500/20 px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 flex-shrink-0 mt-1"
@@ -498,7 +498,7 @@ export default function About() {
                               integrating natural language processing with booking systems to streamline customer interactions.
                             </p>
                             <a
-                              href="#" // Replace with actual link
+                              href="https://igc-alpha.vercel.app/" // Replace with actual link
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 bg-purple-500/10 hover:bg-purple-500/20 text-purple-500 border border-purple-500/20 px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 flex-shrink-0 mt-1"
