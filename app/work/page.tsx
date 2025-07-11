@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Calendar, Tag } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -262,12 +263,12 @@ export default function Work() {
               I&apos;m always excited to work on new projects and bring innovative ideas to life. 
               Let&apos;s discuss how we can collaborate on your next venture.
             </p>
-            <a
+            <Link
               href="/?from=start-project"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium transition-colors inline-block"
             >
               Start a Project
-            </a>
+            </Link>
           </motion.div>
         </section>
       </div>
