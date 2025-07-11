@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Calendar, Clock } from "lucide-react";
 
 const blogPosts = [
   {
