@@ -10,7 +10,7 @@ const projects = [
     description: "Designed using Next.js, Supabase, Clerk, TypeScript, and modern web technologies to deliver seamless customer loyalty experiences. Features interactive kiosk interface, point accumulation, reward redemption, and comprehensive analytics dashboard for business insights.",
     image: "/SmokeTokensBanner.webp",
     tags: ["Next.js", "Supabase", "Clerk", "TypeScript", "Kiosk UI", "Analytics"],
-    liveUrl: "#", // Replace with actual link
+    liveUrl: "https://canna-points-jc3h.vercel.app",
     githubUrl: "#", // Replace with actual link
     featured: true,
     year: "2024",
@@ -21,7 +21,7 @@ const projects = [
     description: "Created a full-stack system for managing product stock levels, locations, and user roles across multiple teams. Built with a modern React frontend and .NET Core microservices on the backend. Features real-time updates, automated alerts, and comprehensive reporting.",
     image: "/85appBanner.webp",
     tags: ["React", ".NET Core", "Microservices", "Real-time", "Multi-user", "Dashboard"],
-    liveUrl: "#", // Replace with actual link
+    liveUrl: "https://inventory-85.vercel.app/",
     githubUrl: "#", // Replace with actual link
     featured: true,
     year: "2024",
@@ -32,33 +32,11 @@ const projects = [
     description: "Developed for websites that handles customer questions and booking requests, integrating natural language processing with booking systems to streamline customer interactions. Features automated responses, booking integration, and conversation analytics.",
     image: "/placeholder-project-3.jpg",
     tags: ["NLP", "Chat-bot", "Booking Integration", "AI", "Customer Service", "Analytics"],
-    liveUrl: "#", // Replace with actual link
+    liveUrl: "https://igc-alpha.vercel.app/",
     githubUrl: "#", // Replace with actual link
     featured: true,
     year: "2024",
     category: "AI & Automation"
-  },
-  {
-    title: "Restaurant Inventory Management System",
-    description: "Comprehensive inventory management platform built with Next.js, featuring real-time stock tracking, automated reorder alerts, supplier management, and cost analysis. Integrated with Supabase for scalable data storage and Clerk for secure authentication with role-based access control for restaurant staff.",
-    image: "/placeholder-project-4.jpg",
-    tags: ["Next.js", "Clerk", "Supabase", "TypeScript", "Real-time", "Dashboard"],
-    liveUrl: "https://restaurant-inventory-demo.vercel.app",
-    githubUrl: "https://github.com/joshfarhi/restaurant-inventory-system",
-    featured: false,
-    year: "2024",
-    category: "Enterprise Software"
-  },
-  {
-    title: "Customer Loyalty & Rewards Kiosk System",
-    description: "Full-stack loyalty program platform with interactive kiosk interface and comprehensive admin dashboard. Features customer enrollment, points tracking, reward redemption, and detailed analytics for customer retention insights. Built with Next.js, Clerk authentication, and Supabase for real-time data synchronization.",
-    image: "/placeholder-project-5.jpg",
-    tags: ["Next.js", "Clerk", "Supabase", "React", "Analytics", "Kiosk UI"],
-    liveUrl: "https://loyalty-kiosk-demo.vercel.app",
-    githubUrl: "https://github.com/joshfarhi/loyalty-rewards-system",
-    featured: false,
-    year: "2024",
-    category: "Customer Management"
   }
 ];
 
