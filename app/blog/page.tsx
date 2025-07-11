@@ -240,31 +240,6 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* Newsletter CTA */}
-        <section className="mt-20 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-12 max-w-2xl mx-auto"
-          >
-            <h3 className="text-2xl font-semibold mb-4">Stay Updated</h3>
-            <p className="text-muted-foreground mb-8">
-              Did I capture your attention? 
-              No spam, just more writings to come about my travels and experiences as a Digital Nomad.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-input border border-border rounded-full px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </motion.div>
-        </section>
       </div>
     </div>
   );
