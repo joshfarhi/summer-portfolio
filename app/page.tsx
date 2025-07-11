@@ -3,8 +3,23 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, Code, Zap, Database, TestTube, Settings, Users, Layers } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [showContactGlow, setShowContactGlow] = useState(false);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('from') === 'start-project') {
+      setShowContactGlow(true);
+      // Remove the parameter from URL without reload
+      const url = new URL(window.location.href);
+      url.searchParams.delete('from');
+      window.history.replaceState({}, '', url);
+      // Remove glow after animation completes
+      setTimeout(() => setShowContactGlow(false), 3000);
+    }
+  }, []);
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -68,7 +83,11 @@ export default function Home() {
               <div className="flex gap-4 justify-center">
                 <a
                   href="mailto:joshfarhi12@gmail.com"
-                  className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 px-6 py-3 rounded-full font-medium transition-colors flex items-center gap-2 group"
+                  className={`bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
+                    showContactGlow 
+                      ? 'animate-pulse ring-4 ring-primary/50 shadow-lg shadow-primary/25 bg-primary/20' 
+                      : ''
+                  }`}
                   aria-label="Send Email"
                 >
                   <Mail className="w-4 h-4" />
@@ -235,7 +254,11 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
                 href="mailto:joshfarhi12@gmail.com"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors flex items-center justify-center gap-2"
+                className={`bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
+                  showContactGlow 
+                    ? 'animate-pulse ring-4 ring-primary/50 shadow-lg shadow-primary/25 scale-105' 
+                    : ''
+                }`}
               >
                 <Mail className="w-4 h-4" />
                 Get In Touch

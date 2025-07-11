@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
+import { ExternalLink, Calendar, Tag } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
@@ -11,7 +11,6 @@ const projects = [
     image: "/SmokeTokensBanner.webp",
     tags: ["Next.js", "Supabase", "Clerk", "TypeScript", "Kiosk UI", "Analytics"],
     liveUrl: "https://canna-points-jc3h.vercel.app",
-    githubUrl: "#", // Replace with actual link
     featured: true,
     year: "2024",
     category: "Customer Loyalty"
@@ -22,7 +21,6 @@ const projects = [
     image: "/85appBanner.webp",
     tags: ["React", ".NET Core", "Microservices", "Real-time", "Multi-user", "Dashboard"],
     liveUrl: "https://inventory-85.vercel.app/",
-    githubUrl: "#", // Replace with actual link
     featured: true,
     year: "2024",
     category: "Enterprise Software"
@@ -33,7 +31,6 @@ const projects = [
     image: "/placeholder-project-3.jpg",
     tags: ["NLP", "Chat-bot", "Booking Integration", "AI", "Customer Service", "Analytics"],
     liveUrl: "https://igc-alpha.vercel.app/",
-    githubUrl: "#", // Replace with actual link
     featured: true,
     year: "2024",
     category: "AI & Automation"
@@ -125,23 +122,21 @@ export default function Work() {
                         <ExternalLink className="w-4 h-4" />
                         Live Site
                       </a>
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="border border-border hover:bg-accent text-foreground px-6 py-2 rounded-full font-medium transition-colors flex items-center gap-2"
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
                     </div>
                   </div>
                   
                   <div className="lg:order-first">
                     <div className="aspect-[4/3] overflow-hidden">
                       {project.image.includes('placeholder') ? (
-                        <div className="w-full h-full flex items-center justify-center bg-muted/20 border border-border rounded-xl">
-                          <span className="text-muted-foreground">Project Screenshot</span>
+                        <div className="w-full h-full flex flex-col items-center justify-center bg-muted/20 border border-border rounded-xl p-8">
+                          {project.title === "Intelligent Chat-bot" ? (
+                            <>
+                              <h3 className="text-2xl font-bold text-foreground mb-2">AI Chat Assistant</h3>
+                              <p className="text-muted-foreground text-center">Natural Language Processing & Booking Integration</p>
+                            </>
+                          ) : (
+                            <span className="text-muted-foreground">Project Screenshot</span>
+                          )}
                         </div>
                       ) : (
                         <Image
@@ -183,8 +178,15 @@ export default function Work() {
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   {project.image.includes('placeholder') ? (
-                    <div className="w-full h-full flex items-center justify-center bg-muted/20 border-b border-border">
-                      <span className="text-muted-foreground text-sm">Project Screenshot</span>
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-muted/20 border-b border-border p-6">
+                      {project.title === "Intelligent Chat-bot" ? (
+                        <>
+                          <h4 className="text-lg font-bold text-foreground mb-2 text-center">AI Chat Assistant</h4>
+                          <p className="text-muted-foreground text-xs text-center">Natural Language Processing & Booking Integration</p>
+                        </>
+                      ) : (
+                        <span className="text-muted-foreground text-sm">Project Screenshot</span>
+                      )}
                     </div>
                   ) : (
                     <Image
@@ -240,15 +242,6 @@ export default function Work() {
                       <ExternalLink className="w-3 h-3" />
                       Live
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 border border-border hover:bg-accent text-foreground py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
-                    >
-                      <Github className="w-3 h-3" />
-                      Code
-                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -270,7 +263,7 @@ export default function Work() {
               Let&apos;s discuss how we can collaborate on your next venture.
             </p>
             <a
-              href="mailto:joshfarhi12@gmail.com"
+              href="/?from=start-project"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-medium transition-colors inline-block"
             >
               Start a Project
