@@ -457,7 +457,7 @@ export default function About() {
                               to deliver seamless customer loyalty experiences.
                             </p>
                             <a
-                              href="canna-points-jc3h.vercel.app" // Replace with actual link
+                              href="https://canna-points-jc3h.vercel.app"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 bg-blue-500/10 hover:bg-blue-500/20 text-blue-500 border border-blue-500/20 px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 flex-shrink-0 mt-1"
