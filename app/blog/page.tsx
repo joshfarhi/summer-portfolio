@@ -123,7 +123,7 @@ export default function Blog() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8 hover:bg-card/50 transition-colors group"
+                className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8 opacity-75 relative"
               >
                 <div className="grid lg:grid-cols-4 gap-6">
                   <div className="lg:col-span-3 space-y-4">
@@ -141,11 +141,12 @@ export default function Blog() {
                       </div>
                     </div>
                     
-                    <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
-                      <Link href={`/blog/${post.slug}`}>
-                        {post.title}
-                      </Link>
+                    <h3 className="text-2xl font-semibold text-muted-foreground">
+                      {post.title}
                     </h3>
+                    <div className="inline-block bg-orange-500/20 text-orange-500 px-3 py-1 rounded-full text-sm font-medium mt-2">
+                      In progress writing.
+                    </div>
                     
                     <p className="text-muted-foreground leading-relaxed">
                       {post.excerpt}
@@ -168,13 +169,9 @@ export default function Blog() {
                       <span className="text-muted-foreground text-sm">Article Image</span>
                     </div>
                     
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-medium transition-colors flex items-center gap-2 group"
-                    >
-                      Read More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="bg-muted/50 text-muted-foreground px-6 py-2 rounded-full font-medium flex items-center gap-2 cursor-not-allowed">
+                      Coming Soon
+                    </div>
                   </div>
                 </div>
               </motion.article>
@@ -200,7 +197,7 @@ export default function Blog() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-card/30 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:bg-card/50 transition-colors group"
+                className="bg-card/30 backdrop-blur-sm border border-border rounded-xl overflow-hidden opacity-75 relative"
               >
                 <div className="bg-muted/20 border-b border-border aspect-[16/9] flex items-center justify-center">
                   <span className="text-muted-foreground text-sm">Article Image</span>
@@ -216,11 +213,12 @@ export default function Blog() {
                     </span>
                   </div>
                   
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                    <Link href={`/blog/${post.slug}`}>
-                      {post.title}
-                    </Link>
+                  <h3 className="text-lg font-semibold mb-3 text-muted-foreground line-clamp-2">
+                    {post.title}
                   </h3>
+                  <div className="inline-block bg-orange-500/20 text-orange-500 px-2 py-1 rounded-full text-xs font-medium mb-3">
+                    In progress writing.
+                  </div>
                   
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                     {post.excerpt}
@@ -232,13 +230,9 @@ export default function Blog() {
                       {post.readTime}
                     </div>
                     
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="text-primary hover:text-primary/80 text-sm font-medium flex items-center gap-1 group"
-                    >
-                      Read
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="text-muted-foreground text-sm font-medium flex items-center gap-1 cursor-not-allowed">
+                      Coming Soon
+                    </div>
                   </div>
                 </div>
               </motion.article>
