@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [showContactGlow, setShowContactGlow] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -20,6 +21,16 @@ export default function Home() {
       setTimeout(() => setShowContactGlow(false), 3000);
     }
   }, []);
+
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText('joshfarhi12@gmail.com');
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    } catch (err) {
+      console.error('Failed to copy email: ', err);
+    }
+  };
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -81,18 +92,18 @@ export default function Home() {
               
               {/* Social Media Buttons */}
               <div className="flex gap-4 justify-center">
-                <a
-                  href="mailto:joshfarhi12@gmail.com"
+                <button
+                  onClick={copyEmailToClipboard}
                   className={`bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
                     showContactGlow 
                       ? 'animate-pulse ring-4 ring-primary/50 shadow-lg shadow-primary/25 bg-primary/20' 
                       : ''
                   }`}
-                  aria-label="Send Email"
+                  aria-label="Copy Email"
                 >
                   <Mail className="w-4 h-4" />
                   <span className="hidden sm:inline">Email</span>
-                </a>
+                </button>
                 <a
                   href="https://github.com/joshfarhi"
                   target="_blank"
@@ -252,8 +263,8 @@ export default function Home() {
               Please feel free to contact me if you are a technical recruiter or associated with a company hiring for a developer role.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <a
-                href="mailto:joshfarhi12@gmail.com"
+              <button
+                onClick={copyEmailToClipboard}
                 className={`bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
                   showContactGlow 
                     ? 'animate-pulse ring-4 ring-primary/50 shadow-lg shadow-primary/25 scale-105' 
@@ -262,7 +273,7 @@ export default function Home() {
               >
                 <Mail className="w-4 h-4" />
                 Get In Touch
-              </a>
+              </button>
               <div className="flex gap-4 justify-center">
                 <a
                   href="https://github.com/joshfarhi"
@@ -296,6 +307,19 @@ export default function Home() {
           </motion.div>
         </section>
       </div>
+      
+      {/* Toast Notification */}
+      {showToast && (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          className="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50"
+        >
+          <Mail className="w-4 h-4" />
+          <span>Email copied to clipboard!</span>
+        </motion.div>
+      )}
     </div>
   );
 }
