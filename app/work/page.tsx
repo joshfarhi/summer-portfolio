@@ -7,14 +7,14 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Kiosk Rewards Points System",
-    description: "Designed using Next.js, Supabase, Clerk, TypeScript, and modern web technologies to deliver seamless customer loyalty experiences. Features interactive kiosk interface, point accumulation, reward redemption, and comprehensive analytics dashboard for business insights.",
+    title: "Smoke Tokens - Cannabis Dispensary Loyalty Platform",
+    description: "Comprehensive loyalty program software specifically designed for cannabis dispensaries and smoke shops. Built with Next.js, Supabase, Clerk, and TypeScript featuring simple kiosk-based signup, automatic point tracking, customizable rewards, and comprehensive analytics dashboard. Includes 14-day free trial and transparent pricing at $49/month.",
     image: "/SmokeTokensBanner.webp",
     tags: ["Next.js", "Supabase", "Clerk", "TypeScript", "Kiosk UI", "Analytics"],
-    liveUrl: "https://canna-points-jc3h.vercel.app",
+    liveUrl: "https://smoketokens.com",
     featured: true,
-    year: "2024",
-    category: "Customer Loyalty"
+    year: "2025",
+    category: "Enterprise Software"
   },
   {
     title: "Inventory Tracking System",
@@ -23,26 +23,71 @@ const projects = [
     tags: ["React", ".NET Core", "Microservices", "Real-time", "Multi-user", "Dashboard"],
     liveUrl: "https://inventory-85.vercel.app/",
     featured: true,
-    year: "2024",
+    year: "2025",
     category: "Enterprise Software"
+  },
+  {
+    title: "Family Recovery Support Center",
+    description: "Solo-developed comprehensive website for a family recovery support organization helping loved ones navigate substance abuse and mental health challenges. Built from scratch using Next.js, TypeScript, Aceternity UI, ShadCN, and Tailwind CSS. Conducted extensive SEO research using Google Search Console and AI tools to optimize content strategy, wrote targeted resource materials, and provided strategic blog content recommendations to enhance organic reach and community engagement.",
+    image: "/FSRC-landingpage.png",
+    tags: ["Next.js", "TypeScript", "Aceternity UI", "ShadCN", "Tailwind CSS", "SEO", "Content Strategy"],
+    liveUrl: "https://familyrecoverysupportcenter.com",
+    featured: true,
+    year: "2025",
+    category: "Website Development and SEO Analytics"
   },
   {
     title: "Intelligent Chat-bot",
     description: "Developed for websites that handles customer questions and booking requests, integrating natural language processing with booking systems to streamline customer interactions. Features automated responses, booking integration, and conversation analytics.",
-    image: "/placeholder-project-3.jpg",
+    image: "/placeholder-project-4.jpg",
     tags: ["NLP", "Chat-bot", "Booking Integration", "AI", "Customer Service", "Analytics"],
     liveUrl: "https://igc-alpha.vercel.app/",
-    featured: true,
-    year: "2024",
-    category: "AI & Automation"
+    featured: false,
+    year: "2025",
+    category: "Enterprise Software"
   }
 ];
 
 
 export default function Work() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joshua Farhi",
+    "jobTitle": "Full-Stack Developer & SEO Expert",
+    "url": "https://joshuafarhi.com",
+    "sameAs": [
+      "https://github.com/joshfarhi",
+      "https://linkedin.com/in/joshua-farhi"
+    ],
+    "workExample": [
+      {
+        "@type": "CreativeWork",
+        "name": "Smoke Tokens - Cannabis Dispensary Loyalty Platform",
+        "description": "Comprehensive loyalty program software for cannabis dispensaries built with Next.js and TypeScript",
+        "url": "https://smoketokens.com",
+        "dateCreated": "2025",
+        "programmingLanguage": ["Next.js", "TypeScript", "Supabase"]
+      },
+      {
+        "@type": "CreativeWork", 
+        "name": "Family Recovery Support Center",
+        "description": "Healthcare website with SEO optimization built with Next.js and modern UI frameworks",
+        "url": "https://familyrecoverysupportcenter.com",
+        "dateCreated": "2025",
+        "programmingLanguage": ["Next.js", "TypeScript", "Aceternity UI", "ShadCN"]
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen pt-24 pb-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Hero Section */}
         <section className="mb-16">
           <motion.div
@@ -54,7 +99,7 @@ export default function Work() {
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">My Work</h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Enterprise-grade applications built with modern technologies. Specializing in customer loyalty systems, 
-              inventory management platforms, AI-powered chat-bots, and data-driven solutions using Next.js, React, .NET Core, and cloud technologies.
+              healthcare & recovery platforms, inventory management solutions, and AI-powered applications using Next.js, React, .NET Core, WordPress, and cloud technologies.
             </p>
           </motion.div>
         </section>
@@ -69,7 +114,7 @@ export default function Work() {
           >
             Featured Projects
           </motion.h2>
-          <div className="grid lg:grid-cols-1 gap-12">
+          <div className="grid lg:grid-cols-1 gap-8 lg:gap-12">
             {projects.filter(project => project.featured).map((project, index) => (
               <motion.div
                 key={project.title}
@@ -119,6 +164,7 @@ export default function Work() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-medium transition-colors flex items-center gap-2"
+                        aria-label={`View live site for ${project.title}`}
                       >
                         <ExternalLink className="w-4 h-4" />
                         Live Site
@@ -130,7 +176,12 @@ export default function Work() {
                     <div className="aspect-[4/3] overflow-hidden">
                       {project.image.includes('placeholder') ? (
                         <div className="w-full h-full flex flex-col items-center justify-center bg-muted/20 border border-border rounded-xl p-8">
-                          {project.title === "Intelligent Chat-bot" ? (
+                          {project.title === "Family Recovery Support Center" ? (
+                            <>
+                              <h3 className="text-2xl font-bold text-foreground mb-2">Recovery Support Platform</h3>
+                              <p className="text-muted-foreground text-center">Community Resources & Family Support</p>
+                            </>
+                          ) : project.title === "Intelligent Chat-bot" ? (
                             <>
                               <h3 className="text-2xl font-bold text-foreground mb-2">AI Chat Assistant</h3>
                               <p className="text-muted-foreground text-center">Natural Language Processing & Booking Integration</p>
@@ -142,11 +193,13 @@ export default function Work() {
                       ) : (
                         <Image
                           src={project.image}
-                          alt={project.title}
+                          alt={`${project.title} - ${project.category} project showcasing ${project.tags.slice(0, 3).join(', ')}`}
                           width={600}
                           height={450}
                           className="w-full h-full object-contain"
                           style={{ borderRadius: '18px' }}
+                          priority={index === 0}
+                          loading={index === 0 ? "eager" : "lazy"}
                         />
                       )}
                     </div>
@@ -168,7 +221,7 @@ export default function Work() {
             All Projects
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -180,7 +233,12 @@ export default function Work() {
                 <div className="aspect-[4/3] overflow-hidden">
                   {project.image.includes('placeholder') ? (
                     <div className="w-full h-full flex flex-col items-center justify-center bg-muted/20 border-b border-border p-6">
-                      {project.title === "Intelligent Chat-bot" ? (
+                      {project.title === "Family Recovery Support Center" ? (
+                        <>
+                          <h4 className="text-lg font-bold text-foreground mb-2 text-center">Recovery Support Platform</h4>
+                          <p className="text-muted-foreground text-xs text-center">Community Resources & Family Support</p>
+                        </>
+                      ) : project.title === "Intelligent Chat-bot" ? (
                         <>
                           <h4 className="text-lg font-bold text-foreground mb-2 text-center">AI Chat Assistant</h4>
                           <p className="text-muted-foreground text-xs text-center">Natural Language Processing & Booking Integration</p>
@@ -192,11 +250,12 @@ export default function Work() {
                   ) : (
                     <Image
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} - ${project.category} project showcasing ${project.tags.slice(0, 3).join(', ')}`}
                       width={400}
                       height={300}
                       className="w-full h-full object-contain"
                       style={{ borderRadius: '18px' }}
+                      loading="lazy"
                     />
                   )}
                 </div>
@@ -239,6 +298,7 @@ export default function Work() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
+                      aria-label={`View live site for ${project.title}`}
                     >
                       <ExternalLink className="w-3 h-3" />
                       Live
@@ -271,7 +331,8 @@ export default function Work() {
             </Link>
           </motion.div>
         </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
