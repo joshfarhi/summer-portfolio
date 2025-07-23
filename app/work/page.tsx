@@ -17,6 +17,26 @@ const projects = [
     category: "Enterprise Software"
   },
   {
+    title: "Hundoja - Premium Streetwear E-Commerce",
+    description: "Modern e-commerce platform for premium streetwear brand featuring exclusive collections, seamless shopping experience, and urban-inspired design. Built with React, TypeScript, and Tailwind CSS. Includes product catalog, shopping cart functionality, user authentication, and responsive design optimized for mobile and desktop experiences.",
+    image: "/hundoja-work.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "E-Commerce", "Responsive Design", "User Authentication"],
+    liveUrl: "https://hundoja.vercel.app/",
+    featured: true,
+    year: "2023",
+    category: "E-Commerce"
+  },
+  {
+    title: "NexGen Auto - Mobile Auto Detailing Services",
+    description: "Professional website for mobile auto detailing services in Southwest Florida. Built with Next.js, Aceternity UI, and Tailwind CSS featuring service packages, transparent pricing, customer testimonials, and booking system. Includes SEO optimization, responsive design, and modern UI components for enhanced user experience.",
+    image: "/nexgen-work.png",
+    tags: ["Next.js", "Aceternity UI", "Tailwind CSS", "SEO", "Responsive Design", "Booking System"],
+    liveUrl: "https://nexgen-website-taupe.vercel.app/",
+    featured: true,
+    year: "2025",
+    category: "Website Development"
+  },
+  {
     title: "Inventory Tracking System",
     description: "Created a full-stack system for managing product stock levels, locations, and user roles across multiple teams. Built with a modern React frontend and .NET Core microservices on the backend. Features real-time updates, automated alerts, and comprehensive reporting.",
     image: "/85appBanner.webp",
@@ -68,6 +88,22 @@ export default function Work() {
         "url": "https://smoketokens.com",
         "dateCreated": "2025",
         "programmingLanguage": ["Next.js", "TypeScript", "Supabase"]
+      },
+      {
+        "@type": "CreativeWork", 
+        "name": "Hundoja - Premium Streetwear E-Commerce",
+        "description": "Modern e-commerce platform for premium streetwear built with React and TypeScript",
+        "url": "https://hundoja.vercel.app/",
+        "dateCreated": "2023",
+        "programmingLanguage": ["React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "@type": "CreativeWork", 
+        "name": "NexGen Auto - Mobile Auto Detailing Services",
+        "description": "Professional website for mobile auto detailing services built with Next.js and Aceternity UI",
+        "url": "https://nexgen-website-taupe.vercel.app/",
+        "dateCreated": "2025",
+        "programmingLanguage": ["Next.js", "Aceternity UI", "Tailwind CSS"]
       },
       {
         "@type": "CreativeWork", 
@@ -173,7 +209,7 @@ export default function Work() {
                   </div>
                   
                   <div className="lg:order-first">
-                    <div className="aspect-[4/3] overflow-hidden">
+                    <div className="aspect-[16/9] overflow-hidden">
                       {project.image.includes('placeholder') ? (
                         <div className="w-full h-full flex flex-col items-center justify-center bg-muted/20 border border-border rounded-xl p-8">
                           {project.title === "Family Recovery Support Center" ? (
@@ -194,9 +230,9 @@ export default function Work() {
                         <Image
                           src={project.image}
                           alt={`${project.title} - ${project.category} project showcasing ${project.tags.slice(0, 3).join(', ')}`}
-                          width={600}
-                          height={450}
-                          className="w-full h-full object-contain"
+                          width={1200}
+                          height={628}
+                          className="w-full h-full object-cover"
                           style={{ borderRadius: '18px' }}
                           priority={index === 0}
                           loading={index === 0 ? "eager" : "lazy"}
@@ -230,7 +266,7 @@ export default function Work() {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className="bg-card/30 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:bg-card/50 transition-colors group"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[16/9] overflow-hidden">
                   {project.image.includes('placeholder') ? (
                     <div className="w-full h-full flex flex-col items-center justify-center bg-muted/20 border-b border-border p-6">
                       {project.title === "Family Recovery Support Center" ? (
@@ -251,9 +287,9 @@ export default function Work() {
                     <Image
                       src={project.image}
                       alt={`${project.title} - ${project.category} project showcasing ${project.tags.slice(0, 3).join(', ')}`}
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-contain"
+                      width={1200}
+                      height={628}
+                      className="w-full h-full object-cover"
                       style={{ borderRadius: '18px' }}
                       loading="lazy"
                     />
