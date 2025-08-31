@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Code, Zap, Database, TestTube, Settings, Users, Layers } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -128,16 +128,18 @@ export default function Home() {
                   </svg>
                   <span className="hidden sm:inline">LinkedIn</span>
                 </a>
-                <a
-                  href="https://leetcode.com/u/joshfarhi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-border hover:bg-accent text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
-                  aria-label="LeetCode Profile"
-                >
-                  <Code className="w-4 h-4" />
-                  <span className="hidden sm:inline">LeetCode</span>
-                </a>
+                                 <a
+                   href="https://leetcode.com/u/joshfarhi"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="border border-border hover:bg-accent text-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-colors flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+                   aria-label="LeetCode Profile"
+                 >
+                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                     <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.904l-3.975 5.483a1.35 1.35 0 0 0-.12.804 1.34 1.34 0 0 0 .54.84l3.6 2.483a1.34 1.34 0 0 0 .84.54 1.35 1.35 0 0 0 .804-.12l5.483-3.975 6.466-4.406a1.374 1.374 0 0 0 .438-.961 1.374 1.374 0 0 0-1.374-1.374z"/>
+                   </svg>
+                   <span className="hidden sm:inline">LeetCode</span>
+                 </a>
               </div>
             </motion.div>
           </motion.div>
@@ -163,18 +165,19 @@ export default function Home() {
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 max-w-5xl mx-auto"
           >
             {[
-              { name: "React.js", icon: Code, gradient: "from-blue-400 to-cyan-400" },
-              { name: "Next.js", icon: Zap, gradient: "from-gray-700 to-gray-900" },
-              { name: "TypeScript", icon: Code, gradient: "from-blue-600 to-indigo-600" },
-              { name: "Tailwind CSS", icon: Layers, gradient: "from-cyan-400 to-blue-500" },
-              { name: "GraphQL", icon: Database, gradient: "from-pink-500 to-rose-500" },
-              { name: "Supabase", icon: Database, gradient: "from-green-400 to-emerald-500" },
-              { name: "Jest", icon: TestTube, gradient: "from-red-500 to-orange-500" },
-              { name: "Lighthouse", icon: Zap, gradient: "from-yellow-400 to-orange-500" },
-              { name: "GitHub Actions", icon: Settings, gradient: "from-gray-800 to-black" },
-              { name: "Vercel", icon: Settings, gradient: "from-black to-gray-800" },
-              { name: ".NET Core", icon: Code, gradient: "from-purple-500 to-indigo-600" },
-              { name: "Figma", icon: Users, gradient: "from-purple-400 to-pink-400" }
+              { name: "React.js", icon: "react", gradient: "from-blue-400 to-cyan-400" },
+              { name: "Vite", icon: "vite", gradient: "from-purple-400 to-pink-500" },
+              { name: "Next.js", icon: "nextjs", gradient: "from-gray-700 to-gray-900" },
+              { name: "TypeScript", icon: "typescript", gradient: "from-blue-600 to-indigo-600" },
+              { name: "Tailwind CSS", icon: "tailwind", gradient: "from-cyan-400 to-blue-500" },
+              { name: "GraphQL", icon: "graphql", gradient: "from-pink-500 to-rose-500" },
+              { name: "Supabase", icon: "supabase", gradient: "from-green-400 to-emerald-500" },
+              { name: "Jest", icon: "jest", gradient: "from-red-500 to-orange-500" },
+              { name: "Lighthouse", icon: "lighthouse", gradient: "from-yellow-400 to-orange-500" },
+              { name: "GitHub Actions", icon: "github-actions", gradient: "from-gray-800 to-black" },
+              { name: "Vercel", icon: "vercel", gradient: "from-black to-gray-800" },
+              { name: ".NET Core", icon: "dotnet", gradient: "from-purple-500 to-indigo-600" },
+              { name: "Figma", icon: "figma", gradient: "from-purple-400 to-pink-400" }
             ].map((tech, index) => {
               const Icon = tech.icon;
               return (
@@ -227,7 +230,87 @@ export default function Home() {
                       transition: { duration: 0.8, ease: "easeInOut" }
                     }}
                   >
-                    <Icon className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300" />
+                                         {tech.icon === "vite" ? (
+                       <img 
+                         src="/vite.svg" 
+                         alt="Vite" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "react" ? (
+                       <img 
+                         src="/react.svg" 
+                         alt="React.js" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "nextjs" ? (
+                       <img 
+                         src="/nextjs.svg" 
+                         alt="Next.js" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "typescript" ? (
+                       <img 
+                         src="/typescript.svg" 
+                         alt="TypeScript" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "tailwind" ? (
+                       <img 
+                         src="/tailwind.svg" 
+                         alt="Tailwind CSS" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "graphql" ? (
+                       <img 
+                         src="/graphql.svg" 
+                         alt="GraphQL" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "supabase" ? (
+                       <img 
+                         src="/supabase.svg" 
+                         alt="Supabase" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "jest" ? (
+                       <img 
+                         src="/jest.svg" 
+                         alt="Jest" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "lighthouse" ? (
+                       <img 
+                         src="/lighthouse.svg" 
+                         alt="Lighthouse" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "github-actions" ? (
+                       <img 
+                         src="/github-actions.svg" 
+                         alt="GitHub Actions" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "vercel" ? (
+                       <img 
+                         src="/vercel.svg" 
+                         alt="Vercel" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "dotnet" ? (
+                       <img 
+                         src="/dotnet.svg" 
+                         alt=".NET Core" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : tech.icon === "figma" ? (
+                       <img 
+                         src="/figma.svg" 
+                         alt="Figma" 
+                         className="w-6 h-6 mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300"
+                       />
+                     ) : (
+                       <Icon className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-125 group-hover:drop-shadow-lg transition-all duration-300" />
+                     )}
                   </motion.div>
                   
                   {/* Text with glow effect */}
@@ -293,15 +376,17 @@ export default function Home() {
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a
-                  href="https://leetcode.com/u/joshfarhi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors"
-                  aria-label="LeetCode Profile"
-                >
-                  <Code className="w-5 h-5" />
-                </a>
+                                 <a
+                   href="https://leetcode.com/u/joshfarhi"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="border border-border hover:bg-accent text-foreground p-3 rounded-full transition-colors"
+                   aria-label="LeetCode Profile"
+                 >
+                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                     <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.904l-3.975 5.483a1.35 1.35 0 0 0-.12.804 1.34 1.34 0 0 0 .54.84l3.6 2.483a1.34 1.34 0 0 0 .84.54 1.35 1.35 0 0 0 .804-.12l5.483-3.975 6.466-4.406a1.374 1.374 0 0 0 .438-.961 1.374 1.374 0 0 0-1.374-1.374z"/>
+                   </svg>
+                 </a>
               </div>
             </div>
           </motion.div>
