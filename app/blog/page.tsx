@@ -6,7 +6,7 @@ import { Calendar, Clock } from "lucide-react";
 
 const blogPosts = [
   {
-    title: "Japan Travel Notes (Placeholder)",
+    title: "Digital Nomad: Japan | My Experience",
     excerpt: "Placeholder content for an upcoming post about traveling in Japan.",
     slug: "japan-travel-notes",
     publishDate: "2024-01-01",
@@ -16,7 +16,7 @@ const blogPosts = [
     tags: ["Placeholder", "Travel", "Japan"]
   },
   {
-    title: "South Korea Travel Notes (Placeholder)",
+    title: "Digital Nomad: South Korea | My Experience",
     excerpt: "Placeholder content for an upcoming post about traveling in South Korea.",
     slug: "south-korea-travel-notes",
     publishDate: "2024-02-01",
@@ -26,7 +26,7 @@ const blogPosts = [
     tags: ["Placeholder", "Travel", "South Korea"]
   },
   {
-    title: "Vietnam Travel Notes (Placeholder)",
+    title: "Digital Nomad: Vietnam | My Experience",
     excerpt: "Placeholder content for an upcoming post about traveling in Vietnam.",
     slug: "vietnam-travel-notes",
     publishDate: "2024-03-01",
@@ -36,7 +36,7 @@ const blogPosts = [
     tags: ["Placeholder", "Travel", "Vietnam"]
   },
   {
-    title: "Thailand Travel Notes (Placeholder)",
+    title: "Digital Nomad: Thailand | My Experience",
     excerpt: "Placeholder content for an upcoming post about traveling in Thailand.",
     slug: "thailand-travel-notes",
     publishDate: "2024-04-01",

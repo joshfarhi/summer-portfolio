@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Vietnam Travel Notes (Placeholder) | Blog",
+  title: "Digital Nomad: Vietnam | My Experience",
   description: "Placeholder content for an upcoming post about traveling in Vietnam.",
 };
 
