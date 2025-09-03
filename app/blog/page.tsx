@@ -1,78 +1,49 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Clock } from "lucide-react";
 
 const blogPosts = [
   {
-    title: "Tokyo in 3 Days: The Ultimate Urban Winter Adventure",
-    excerpt: "Discover the best of Tokyo in winter - from Shibuya's neon lights cutting through the cold to traditional temples dusted with snow. Complete Tokyo travel guide with insider tips for navigating Japan's capital in January.",
-    slug: "tokyo-3-days-winter-adventure",
-    publishDate: "2024-01-28",
-    readTime: "12 min read",
-    category: "Asia Travel",
+    title: "Japan Travel Notes (Placeholder)",
+    excerpt: "Placeholder content for an upcoming post about traveling in Japan.",
+    slug: "japan-travel-notes",
+    publishDate: "2024-01-01",
+    readTime: "5 min read",
+    category: "Japan",
     featured: true,
-    tags: ["Tokyo", "Japan", "Winter", "Shibuya", "Urban Adventure"]
+    tags: ["Placeholder", "Travel", "Japan"]
   },
   {
-    title: "Seoul Decoded: A Modern Korean City Break in February",
-    excerpt: "Uncover Seoul's perfect blend of tradition and modernity during the coldest month. From heated Korean BBQ in Gangnam to exploring Myeongdong's winter markets, experience Seoul when the culture runs hot despite the freezing temperatures.",
-    slug: "seoul-decoded-february-city-break",
-    publishDate: "2024-02-25",
-    readTime: "14 min read",
-    category: "Asia Travel",
+    title: "South Korea Travel Notes (Placeholder)",
+    excerpt: "Placeholder content for an upcoming post about traveling in South Korea.",
+    slug: "south-korea-travel-notes",
+    publishDate: "2024-02-01",
+    readTime: "5 min read",
+    category: "South Korea",
     featured: true,
-    tags: ["Seoul", "South Korea", "Winter", "Korean Culture", "City Break"]
+    tags: ["Placeholder", "Travel", "South Korea"]
   },
   {
-    title: "Hanoi Unveiled: Vietnam's Cultural Tapestry in Spring",
-    excerpt: "Dive deep into Hanoi's rich culture as spring awakens the city. From ancient traditions in the Old Quarter to modern life along the Red River Delta, discover Vietnam's captivating capital emerging from winter.",
-    slug: "hanoi-unveiled-spring-cultural-tapestry",
-    publishDate: "2024-03-30",
-    readTime: "16 min read",
-    category: "Asia Travel",
-    featured: true,
-    tags: ["Hanoi", "Vietnam", "Spring", "Culture", "Old Quarter"]
-  },
-  {
-    title: "Bangkok's Urban Jungle: Street Photography & Hot Season Culture",
-    excerpt: "Master Bangkok street photography while exploring the city's vibrant culture during the hot season. From Sukhumvit's bustling streets to hidden temples, capture the essence of urban Thailand in April's heat.",
-    slug: "bangkok-urban-jungle-hot-season",
-    publishDate: "2024-04-20",
-    readTime: "13 min read",
-    category: "Asia Travel",
-    featured: true,
-    tags: ["Bangkok", "Thailand", "Hot Season", "Street Photography", "Urban Culture"]
-  },
-  {
-    title: "Southern Thailand Sunsets: Chasing Golden Hour in Paradise",
-    excerpt: "Capture stunning sunsets along Thailand's southern coast during the perfect weather season. Best locations, timing, and photography tips for magical golden hour moments along the Gulf of Thailand.",
-    slug: "southern-thailand-sunsets-golden-hour",
-    publishDate: "2024-05-10",
-    readTime: "11 min read",
-    category: "Asia Travel",
+    title: "Vietnam Travel Notes (Placeholder)",
+    excerpt: "Placeholder content for an upcoming post about traveling in Vietnam.",
+    slug: "vietnam-travel-notes",
+    publishDate: "2024-03-01",
+    readTime: "5 min read",
+    category: "Vietnam",
     featured: false,
-    tags: ["Southern Thailand", "Beaches", "Photography", "Sunset", "Gulf of Thailand"]
+    tags: ["Placeholder", "Travel", "Vietnam"]
   },
   {
-    title: "Vientiane Secrets: Laos' Hidden Capital Gem Along the Mekong",
-    excerpt: "Discover Vientiane's charm along the Mekong River during the perfect travel season. Why Laos' capital should be on every Southeast Asia itinerary - from riverside scenes to urban night markets.",
-    slug: "vientiane-secrets-mekong-capital",
-    publishDate: "2024-05-20",
-    readTime: "10 min read",
-    category: "Asia Travel",
+    title: "Thailand Travel Notes (Placeholder)",
+    excerpt: "Placeholder content for an upcoming post about traveling in Thailand.",
+    slug: "thailand-travel-notes",
+    publishDate: "2024-04-01",
+    readTime: "5 min read",
+    category: "Thailand",
     featured: false,
-    tags: ["Vientiane", "Laos", "Mekong River", "Hidden Gems", "Southeast Asia"]
-  },
-  {
-    title: "The Ultimate 5-Month Asia Circuit: Country-Hopping Through Seasons",
-    excerpt: "Epic 5-month journey across Japan, Korea, Thailand, Vietnam & Laos through different seasons. Complete logistics, costs, and insider tips for navigating winter temples to hot season beaches.",
-    slug: "ultimate-5-month-asia-circuit",
-    publishDate: "2024-05-25",
-    readTime: "18 min read",
-    category: "Asia Travel",
-    featured: false,
-    tags: ["Asia Circuit", "Multi-Country", "Seasons", "Travel Guide", "Digital Nomad"]
+    tags: ["Placeholder", "Travel", "Thailand"]
   }
 ];
 
@@ -124,6 +95,11 @@ export default function Blog() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8 opacity-75 relative"
               >
+                <Link
+                  href={`/blog/${post.slug}`}
+                  aria-label={`Read article: ${post.title}`}
+                  className="absolute inset-0 rounded-2xl"
+                />
                 <div className="grid lg:grid-cols-4 gap-6">
                   <div className="lg:col-span-3 space-y-4">
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -168,8 +144,8 @@ export default function Blog() {
                       <span className="text-muted-foreground text-sm">Article Image</span>
                     </div>
                     
-                    <div className="bg-muted/50 text-muted-foreground px-6 py-2 rounded-full font-medium flex items-center gap-2 cursor-not-allowed">
-                      Coming Soon
+                    <div className="bg-primary/10 text-primary px-6 py-2 rounded-full font-medium flex items-center gap-2">
+                      Read Article
                     </div>
                   </div>
                 </div>

@@ -568,7 +568,7 @@ export default function About() {
                 className="relative pl-6 sm:pl-8 pb-8 sm:pb-12 last:pb-0"
               >
                 {/* Static Timeline dot */}
-                <div className="absolute left-0 top-2 w-4 h-4 bg-primary rounded-full border-4 border-background relative z-10" />
+                <div className="absolute left-0 top-2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10" />
                 
                 <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 hover:bg-card/40 transition-all duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
