@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://joshuafarhi.com"),
   title: "Joshua Farhi - Full-Stack Developer | 95+ Lighthouse Scores & SEO Expert",
   description: "Full-stack developer achieving 95+ Lighthouse scores and first-page Google rankings in 30 days. Specializing in Next.js, WordPress, WooCommerce, and high-performance web applications.",
   keywords: "Joshua Farhi, Full-Stack Developer, SEO Expert, Performance Optimization, Next.js, WordPress, WooCommerce, Lighthouse Scores, Naples FL, Remote Work, E-commerce Developer",
@@ -27,15 +28,27 @@ export const metadata: Metadata = {
     title: "Joshua Farhi - Full-Stack Developer & SEO Expert",
     description: "Achieving 95+ Lighthouse scores and first-page Google rankings. Expert in Next.js, WordPress, and high-performance web applications.",
     siteName: "Joshua Farhi Portfolio",
+    images: [
+      {
+        url: "/SmokeTokensBanner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Joshua Farhi Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Joshua Farhi - Full-Stack Developer & SEO Expert",
     description: "Achieving 95+ Lighthouse scores and first-page Google rankings. Expert in Next.js, WordPress, and high-performance web applications.",
+    images: ["/SmokeTokensBanner.webp"],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 

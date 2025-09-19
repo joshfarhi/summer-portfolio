@@ -31,9 +31,25 @@ export default function Home() {
       console.error('Failed to copy email: ', err);
     }
   };
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joshua Farhi",
+    "url": "https://joshuafarhi.com",
+    "jobTitle": "Web Engineer",
+    "sameAs": [
+      "https://github.com/joshfarhi",
+      "https://linkedin.com/in/joshua-farhi"
+    ]
+  };
+
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-12 sm:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {/* Hero Section */}
         <section className="text-center mb-16 sm:mb-20">
           <motion.div
