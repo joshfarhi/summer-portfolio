@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, FileText } from "lucide-react";
+import { Home, User, Briefcase } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "About", href: "/about", icon: User },
   { name: "Work", href: "/work", icon: Briefcase },
-  { name: "Blog", href: "/blog", icon: FileText },
 ];
 
 export default function Navigation() {

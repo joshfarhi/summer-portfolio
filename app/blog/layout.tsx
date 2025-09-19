@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Blog - Joshua Farhi | Remote Work, Travel & Performance Optimization Insights",
@@ -10,5 +11,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  notFound();
 }

@@ -56,7 +56,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 sm:mb-8"
             >
-              Senior Web Engineer
+              Web Engineer
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
