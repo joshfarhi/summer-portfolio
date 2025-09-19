@@ -57,6 +57,16 @@ const projects = [
     category: "Website Development and SEO Analytics"
   },
   {
+    title: "Zoot's Cannabis - E-Commerce Delivery",
+    description: "React-based e-commerce delivery platform for cannabis products with a streamlined browsing-to-checkout flow and mobile-first UX.",
+    image: "/zoots-poster.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "E-Commerce", "Delivery", "Responsive Design"],
+    liveUrl: "https://zootscannabis.co",
+    featured: false,
+    year: "2025",
+    category: "E-Commerce"
+  },
+  {
     title: "Intelligent Chat-bot",
     description: "Developed for websites that handles customer questions and booking requests, integrating natural language processing with booking systems to streamline customer interactions. Features automated responses, booking integration, and conversation analytics.",
     image: "/placeholder-project-4.jpg",
@@ -112,6 +122,14 @@ export default function Work() {
         "url": "https://familyrecoverysupportcenter.com",
         "dateCreated": "2025",
         "programmingLanguage": ["Next.js", "TypeScript", "Aceternity UI", "ShadCN"]
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Zoot's Cannabis - E-Commerce Delivery",
+        "description": "React app e-commerce delivery store",
+        "url": "https://zootscannabis.co",
+        "dateCreated": "2025",
+        "programmingLanguage": ["React", "TypeScript", "Tailwind CSS"]
       }
     ]
   };
